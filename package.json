@@ -2,10 +2,10 @@
   "name": "voice-asistant",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "server/server.js",
   "scripts": {
-    "start": "node server.js",
-    "dev": "nodemon server.js",
+    "start": "node server/server.js",
+    "dev": "nodemon server/server.js",
     "client": "cd client && live-server --port=3001",
     "dev:all": "concurrently \"npm run dev\" \"npm run client\""
   },

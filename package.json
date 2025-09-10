@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node server/server.js",
+    "start": "node server.js",
     "dev": "nodemon server/server.js",
     "client": "cd client && live-server --port=3001",
     "dev:all": "concurrently \"npm run dev\" \"npm run client\""

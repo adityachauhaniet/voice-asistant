@@ -1,0 +1,64 @@
+@media (max-width: 600px) {
+    .container {
+        padding: 10px;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+    
+    .auth-buttons {
+        position: static;
+        margin-top: 15px;
+    }
+    
+    .list-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .list-actions {
+        margin-top: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+    
+    .list-actions button {
+        margin: 5px 5px 0 0;
+    }
+    
+    .command-list {
+        grid-template-columns: 1fr;
+    }
+    
+    .modal-content {
+        width: 90%;
+        margin: 20% auto;
+    }
+    
+    .item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .item-actions {
+        margin-top: 10px;
+        align-self: flex-end;
+    }
+}
+
+@media (max-width: 400px) {
+    h1 {
+        font-size: 1.7rem;
+    }
+    
+    .mic-btn {
+        width: 70px;
+        height: 70px;
+    }
+    
+    .list-title {
+        font-size: 1.3rem;
+    }
+}

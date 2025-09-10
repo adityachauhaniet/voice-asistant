@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voice Command Shopping Assistant</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Voice Command Shopping Assistant</h1>
+            <p>Manage your shopping list with voice commands</p>
+            <div class="auth-buttons">
+                <button id="loginBtn">Login</button>
+                <button id="registerBtn">Register</button>
+                <button id="logoutBtn" style="display: none;">Logout</button>
+            </div>
+        </header>
+        
+        <div class="voice-control">
+            <button class="mic-btn" id="micButton">
+                <i>🎤</i>
+            </button>
+        </div>
+        
+        <div class="status" id="status">Press the microphone to start speaking</div>
+        
+        <div class="shopping-list">
+            <div class="list-header">
+                <h2 class="list-title">My Shopping List</h2>
+                <div class="list-actions">
+                    <button id="clearCompleted">Clear Completed</button>
+                    <button id="clearAll">Clear All</button>
+                    <button id="saveList">Save List</button>
+                </div>
+            </div>
+            
+            <ul class="items" id="itemsList">
+                <!-- Items will be added here dynamically -->
+            </ul>
+            
+            <div class="add-item-form">
+                <input type="text" class="add-item-input" id="itemInput" placeholder="Add an item manually...">
+                <button class="add-item-btn" id="addItemBtn">+</button>
+            </div>
+        </div>
+        
+        <div class="command-help">
+            <h3>Voice Command Examples</h3>
+            <div class="command-list">
+                <div class="command-item">
+                    <div class="command-example">"Add milk to my list"</div>
+                    <div class="command-desc">Adds milk to your shopping list</div>
+                </div>
+                <div class="command-item">
+                    <div class="command-example">"Add two bottles of olive oil"</div>
+                    <div class="command-desc">Adds olive oil with quantity</div>
+                </div>
+                <div class="command-item">
+                    <div class="command-example">"Remove milk"</div>
+                    <div class="command-desc">Removes milk from your list</div>
+                </div>
+                <div class="command-item">
+                    <div class="command-example">"Mark eggs as completed"</div>
+                    <div class="command-desc">Marks eggs as purchased</div>
+                </div>
+                <div class="command-item">
+                    <div class="command-example">"Clear my list"</div>
+                    <div class="command-desc">Clears all items from your list</div>
+                </div>
+                <div class="command-item">
+                    <div class="command-example">"What's on my list?"</div>
+                    <div class="command-desc">Reads your current shopping list</div>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <p>Voice Command Shopping Assistant &copy; 2023</p>
+        </footer>
+    </div>
+
+    <!-- Auth Modal -->
+    <div id="authModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modalTitle">Login</h2>
+            <form id="authForm">
+                <div id="nameField" style="display: none;">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                <button type="submit" id="authSubmit">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/api.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/voice.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,5 +1,5 @@
 const API = {
-    baseURL: 'https://voice-asistant-backend.onrender.com/',
+    baseURL: 'https://voice-asistant-backend.onrender.com',
     authToken: null,
     
     setAuthToken: function(token) {
